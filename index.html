@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>Jobbear</title></head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<script src="/deeplink.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var hashCode = function(s){
+    return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
+  }
+  deeplink.setup({
+    iOS: {
+      appId: "284882215",
+      appName: "facebook",
+    },
+    android: {
+      appId: "com.facebook.katana"
+    }
+  });
+  window.onload = function() {
+    <!-- Deep link URL for existing users with app already installed on their device -->
+//    window.location = 'jobbear://open/register';
+//    deeplink.open('jobbear://open/register');
+    <!-- Download URL (TUNE link) for new users to download the app -->
+//    setTimeout("window.location = 'https://itunes.apple.com/us/genre/music/id34';", 1000);
+  }
+</script>
+<style>
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+    a {
+        font-family: monospace;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 25px;
+        background: #060;
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+<a href="#" onclick="deeplink.open('jobbear://open/register')">Register now</a>
+</body>
+</html>
